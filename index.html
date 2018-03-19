@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timster Browser</title>
+    <link rel="stylesheet" href="./assets/style.css" type="text/css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="./assets/animate.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body onload="startTime()">
+
+    <audio src="./assets/sound/welcome.mp3" autoplay></audio>
+
+    <div class="container">
+      <h1>Welcome back Lars! Happy browsing.</h1>
+
+      <div class="googleSearch">
+        <form action="https://www.google.nl/search">
+            <input type="text" name="q" placeholder="Search Google..." />
+        </form>
+      </div>
+
+      <div class="websites">
+        <div class="websitesText">
+          <h3>My Favourite Websites</h3>
+        </div>
+        <div class="favWebsites">
+          <div class="offscreen">
+            <a href="https://www.offscreenmag.com" target="_blank"><img src="./assets/img/offscreen-min.png" alt="Offscreen Magazine homepage"></a>
+            <!-- <span class="close-offscreen">X</span> -->
+          </div>
+          <div class="ra">
+            <a href="https://www.residentadvisor.net" target="_blank"><img src="./assets/img/ra-min.png" alt="Resident Advisor homepage"></a>
+            <!-- <span class="close-ra">X</span> -->
+          </div>
+          <div class="tweedoc">
+            <a href="https://www.2doc.nl" target="_blank"><img src="./assets/img/2doc-min.png" alt="2Doc homepage"></a>
+            <!-- <span class="close-tweedoc">X</span> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="tools">
+        <h3>My Tools</h3>
+        <div class="weather">
+          <a class="weatherwidget-io" href="https://forecast7.com/nl/52d374d90/amsterdam/" data-label_1="AMSTERDAM" data-label_2="Weer" data-font="Arimo" data-icons="Climacons Animated" data-mode="Current" data-theme="mountains" >AMSTERDAM Weer</a>
+          <script>
+          !(function(d, s, id) {
+	var js,
+		fjs = d.getElementsByTagName(s)[0];
+	if (!d.getElementById(id)) {
+		js = d.createElement(s);
+		js.id = id;
+		js.src = 'https://weatherwidget.io/js/widget.min.js';
+		fjs.parentNode.insertBefore(js, fjs);
+	}
+})(document, 'script', 'weatherwidget-io-js');
+</script>
+        </div>
+
+        <div id="time"></div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="./assets/script.js"></script>
+
+  </body>
+</html>
